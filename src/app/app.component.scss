@@ -1,0 +1,58 @@
+.header {
+    padding: 60px;
+    text-align:center;
+    background-image: url(https://insights.pfizer.com/wp-content/uploads/2022/07/img-2-1440x550.jpg);
+    color: rgb(0, 109, 252);
+    font-size: 30px;
+    border-image-width: auto;
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;    
+  }
+
+   /* Style the navigation bar */
+.navbar {
+    width: 100%;
+    background-color: #017cff;
+    overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: #4a6bfb;
+  }
+  
+  /* Current/active navbar link */
+  .active {
+    background-color: #0c04aa;
+  }
+  
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 700px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  } 
+  .footer {
+    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #017cff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+  }
