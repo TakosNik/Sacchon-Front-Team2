@@ -1,1 +1,18 @@
-<p>create patient!</p>
+
+<form [formGroup]="createForm" (ngSubmit)="createUser()" class="form">
+
+  <input type="text" formControlName="firstname" class="form-control mb-1" placeholder="First name">
+  <small class="alert alert-danger" *ngIf="firstname.hasError('required') && firstname.touched">First Name is required</small>
+
+  <input type="text" formControlName="lastname" class="form-control" placeholder="Last name">
+  <small class="alert alert-danger" *ngIf="lastname.hasError('required') && lastname.touched">Last name is required</small>
+  <small class="alert alert-danger" *ngIf="lastname.hasError('minlength') && lastname.touched">Last must have 3 letters</small>
+
+
+  <button [disabled]="createForm.invalid" class="btn btn-primary mt-3">Create a Patient</button>
+</form>
+
+
+
+
+<pre>{{ response | json }} </pre>

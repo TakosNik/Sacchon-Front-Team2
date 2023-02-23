@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,16 +13,16 @@ export class UserService {
       return this.http.get(url);
     }
 
-    post(){
+    post(data:any){
       const url = 'https://reqres.in/api/users'
 
-      const data = {
-        "name": "morpheus",
-        "job": "leader"
-      }
+      const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('crossDomain', 'true');
 
-      return this.http.post(url , data)
-      
+    return this.http.post(url, JSON.stringify(data), {headers: headers});
+
+
 
     }
 }
