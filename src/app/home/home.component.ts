@@ -9,11 +9,11 @@ import { UserService } from '../services/user.service';
 export class HomeComponent {
 
   response: any;
-
+  data: any;
   constructor(private service:UserService){}
 
   ngOnInit(): void{
-    this.service.post().subscribe({
+    this.service.post(this.data).subscribe({
       next: data => this.response = data
     })
   }

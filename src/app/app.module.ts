@@ -8,6 +8,8 @@ import { CreateComponent } from './create/create.component';
 import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { UserListComponent } from './user-list/user-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

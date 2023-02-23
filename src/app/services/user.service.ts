@@ -9,7 +9,7 @@ export class UserService {
   constructor(private http:HttpClient) {}
 
     get(){
-      const url = 'https://reqres.in/api/users?page=2'
+      const url = "http://localhost:9001/Patient"
       return this.http.get(url);
     }
 

@@ -8,14 +8,11 @@ import { UserListComponent } from './user-list/user-list.component';
 
 const routes: Routes = [
   { path: 'home' , component: HomeComponent },
-  { path: '' , component: HomeComponent },
   { path: 'admin' , component: CreateComponent},
   { path: 'patient' , component: UserListComponent },
-  { path: 'doctor' , component: CreateComponent},
-  { path: '**' , component: FileNotFoundComponent},
-  { path: 'user' , component: UserComponent},
-  { path: 'user-list' , component: UserListComponent}
-
+  { path: 'user-list' , component: UserListComponent},
+  { path: '' , component: HomeComponent },
+  { path: '**' , component: FileNotFoundComponent}
 ];
 
 @NgModule({

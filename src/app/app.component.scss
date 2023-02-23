@@ -7,7 +7,7 @@
     border-image-width: auto;
     background-size:     cover;
     background-repeat:   no-repeat;
-    background-position: center center;    
+    background-position: center center;
   }
 
    /* Style the navigation bar */
@@ -16,7 +16,7 @@
     background-color: #017cff;
     overflow: auto;
   }
-  
+
   /* Navbar links */
   .navbar a {
     float: left;
@@ -26,26 +26,26 @@
     text-decoration: none;
     font-size: 26px;
   }
-  
+
   /* Navbar links on mouse-over */
   .navbar a:hover {
     background-color: #4a6bfb;
   }
-  
+
   /* Current/active navbar link */
-  .active {
-    background-color: #0c04aa;
-  }
-  
+  // .active {
+  //   // background-color: #04aa94;
+  // }
+
   /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
   @media screen and (max-width: 700px) {
     .navbar a {
       float: none;
       display: block;
     }
-  } 
+  }
   .footer {
-    
+
     position: fixed;
     left: 0;
     bottom: 0;
@@ -54,5 +54,5 @@
     color: white;
     text-align: center;
     padding: 10px;
-    
+
   }
