@@ -5,16 +5,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
+  getAllPatients() {
+    throw new Error('Method not implemented.');
+  }
   createUser(value: any) {
     throw new Error('Method not implemented.');
   }
 
   constructor(private http:HttpClient) {}
 
-    get(){
-      const url = "http://localhost:9001/Patient"
-      return this.http.get(url);
-    }
+  getPatientById(id:number){
+    const url = `http://localhost:9000/patient/1`;
+    return this.http.get(url);
+  }
 
     post(data:any){
       const url = 'https://reqres.in/api/users'

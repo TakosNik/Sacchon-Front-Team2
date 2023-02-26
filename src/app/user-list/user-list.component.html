@@ -1,7 +1,39 @@
-<h2>User list works!</h2>
 
-<p> Page Number : {{ unames.page }}</p>
-<p> Tolal Number of Users : {{ unames.total }} ,</p>
-
-<app-user [uname] = "userName" *ngFor="let userName of unames.data"></app-user>
-<pre> {{unames | json}} </pre>
+<div class="container">
+  <div class="row justify-content-end">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>{{ patient.firstname }} {{ patient.lastname }}</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-4">
+              <h4>Username:</h4>
+              <p>{{ patient.username }}</p>
+            </div>
+            <div class="col-sm-4">
+              <h4>Birthdate:</h4>
+              <p>{{ patient.birthdate | date:'longDate' }}</p>
+            </div>
+            <div class="col-sm-4">
+              <h4>Diabetes Type:</h4>
+              <p>{{ patient.diabetestype }}</p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-6">
+              <h4>Address:</h4>
+              <p>{{ patient.address }}</p>
+            </div>
+            <div class="col-sm-6">
+              <h4>City:</h4>
+              <p>{{ patient.city }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

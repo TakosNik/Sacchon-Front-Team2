@@ -17,13 +17,13 @@ export class CreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm = this.fb.group({
-      username: ['', [Validators.required]],
-      firstname: ['', [Validators.required]],
-      lastname: ['', [Validators.required, Validators.minLength(3)]],
+      username: [''],
+      firstname: [''],
+      lastname: [''],
       address: [''],
       city: [''],
       birthdate: [''],
-      typediabetes: ['Type 1']
+      diabetestype: ['']
     });
   }
 
@@ -35,8 +35,16 @@ export class CreateComponent implements OnInit {
 
 
   createUser() {
-    const data = this.createForm.value;
-    this.http.post('http://localhost:9000/Patient', data).subscribe({
+    const data = {
+      username: this.username?.value,
+      firstname: this.firstname?.value,
+      lastname: this.lastname?.value,
+      address: this.address?.value,
+      city: this.city?.value,
+      birthdate: this.birthdate?.value,
+      diabetestype: this.diabetestype?.value
+    };
+    this.http.post('http://localhost:9000/patient', data).subscribe({
       next: res => {
         this.response = res;
         this.createForm.reset();
@@ -44,6 +52,7 @@ export class CreateComponent implements OnInit {
       error: err => console.error(err)
     });
   }
+
 
 
   resetForm() {
@@ -74,5 +83,9 @@ export class CreateComponent implements OnInit {
 
   get birthdate() {
     return this.createForm.get('birthdate');
+  }
+
+  get diabetestype() {
+    return this.createForm.get('diabetestype');
   }
 }
