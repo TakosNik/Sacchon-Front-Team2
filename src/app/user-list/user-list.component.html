@@ -1,38 +1,18 @@
-
 <div class="container">
-  <div class="row justify-content-end">
-    <div class="col-4">
-      <div class="card">
-        <div class="card-header">
-          <h2>{{ patient.firstname }} {{ patient.lastname }}</h2>
-        </div>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-sm-4">
-              <h4>Username:</h4>
-              <p>{{ patient.username }}</p>
-            </div>
-            <div class="col-sm-4">
-              <h4>Birthdate:</h4>
-              <p>{{ patient.birthdate | date:'longDate' }}</p>
-            </div>
-            <div class="col-sm-4">
-              <h4>Diabetes Type:</h4>
-              <p>{{ patient.diabetestype }}</p>
-            </div>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col-sm-6">
-              <h4>Address:</h4>
-              <p>{{ patient.address }}</p>
-            </div>
-            <div class="col-sm-6">
-              <h4>City:</h4>
-              <p>{{ patient.city }}</p>
-            </div>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-md-8">
+      <!-- Your main content goes here -->
+    </div>
+    <div class="col-md-4">
+      <div class="patient-info-box">
+        <h3>Patient Information</h3>
+        <hr>
+        <p><strong>Name:</strong> {{patient.firstname}} {{patient.lastname}}</p>
+        <p><strong>Username:</strong> {{patient.username}}</p>
+        <p><strong>Birthdate:</strong> {{patient.birthdate | date:'longDate'}}</p>
+        <p><strong>Diabetes Type:</strong> {{patient.diabetestype}}</p>
+        <p><strong>Address:</strong> {{patient.address}}</p>
+        <p><strong>City:</strong> {{patient.city}}</p>
       </div>
     </div>
   </div>
