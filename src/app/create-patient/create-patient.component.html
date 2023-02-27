@@ -1,0 +1,57 @@
+<section class="h-100 h-custom" style="background-color: #dee1e6;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <form [formGroup]="createForm" (ngSubmit)="createUser()" class="px-md-2">
+            <div>
+              <br>
+              <label> Username: </label>
+              <input type="text" formControlName="username" class="form-control mb-1" placeholder="Username">
+              <!-- <small class="alert alert-danger" *ngIf="createForm.get('username').hasError('required') && createForm.get('username').touched">Username is required</small> -->
+            </div>
+            <div>
+              <label> First Name: </label>
+              <input type="text" formControlName="firstname" class="form-control mb-1" placeholder="First name">
+              <!-- <small class="alert alert-danger" *ngIf="createForm.get('firstname').hasError('required') && createForm.get('firstname').touched">First Name is required</small> -->
+            </div>
+            <div>
+              <label> Last Name: </label>
+              <input type="text" formControlName="lastname" class="form-control" placeholder="Last name">
+              <!-- <small class="alert alert-danger" *ngIf="createForm.get('lastname').hasError('required') && createForm.get('lastname').touched">Last name is required</small>
+              <small class="alert alert-danger" *ngIf="createForm.get('lastname').hasError('minlength') && createForm.get('lastname').touched">Last must have 3 letters</small> -->
+            </div>
+            <div>
+              <label> Address: </label>
+              <input type="text" formControlName="address" class="form-control" placeholder="Address">
+            </div>
+            <div>
+              <label> City: </label>
+              <input type="text" formControlName="city" class="form-control" placeholder="City">
+            </div>
+            <div>
+              <label> BirthDate: </label>
+              <input type="date" formControlName="birthdate" class="form-control" placeholder="BirthDate">
+            </div>
+            <div>
+              <label> Diabetes Type: </label>
+              <br>
+              <select id="diabetestype" name="diabetestype" formControlName="diabetestype">
+                <option value="Type 1">Type 1</option>
+                <option value="Type 2">Type 2</option>
+                <option value="Gestational">Gestational</option>
+              </select>
+            </div>
+
+            <div class="buttons">
+              <button [disabled]="createForm.invalid" class="btn btn-primary mt-3">Create a Patient</button>
+              <button type="reset" (click)="resetForm()" class="btn btn-primary mt-3">Clear</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<pre>{{ response | json }} </pre>
