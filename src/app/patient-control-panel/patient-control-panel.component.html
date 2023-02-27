@@ -1,0 +1,65 @@
+<div class="container mt-5">
+  <h2>{{ patient?.firstName }} {{ patient?.lastName }}'s Control Panel</h2>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Carbonate Intake</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount (mg)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let carbonate of dailyCarbonateIntakes">
+            <td>{{ carbonate.date | date:'MM/dd/yyyy' }}</td>
+            <td>{{ carbonate.amount }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form (ngSubmit)="addCarbonate()" #carbonateForm="ngForm">
+        <div class="form-group">
+          <label for="amount">Amount (mg)</label>
+          <input type="number" class="form-control" id="amount" name="amount" [(ngModel)]="newCarbonate.amount" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!carbonateForm.form.valid">Add</button>
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <h4>Blood Glucose Level</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Level (mg/dL)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let glucose of dailyBloodGlucoseLevels">
+            <td>{{ glucose.date | date:'MM/dd/yyyy' }}</td>
+            <td>{{ glucose.level }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form (ngSubmit)="addGlucose()" #glucoseForm="ngForm">
+        <div class="form-group">
+          <label for="level">Level (mg/dL)</label>
+          <input type="number" class="form-control" id="level" name="level" [(ngModel)]="newGlucose.level" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!glucoseForm.form.valid">Add</button>
+      </form>
+    </div>
+  </div>
+
+  <hr>
+
+  <h4>Last Consultation</h4>
+  <p>{{ latestDoctorConsultation?.date | date:'MM/dd/yyyy' }} - {{ latestDoctorConsultation?.summary }}</p>
+</div>
