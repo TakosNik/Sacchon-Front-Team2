@@ -5,15 +5,33 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Add this line
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreateComponent } from './create/create.component';
+import { CreatePatientComponent } from './create-patient/create-patient.component';
 import { PatientControlPanelComponent } from './patient-control-panel/patient-control-panel.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import { UserComponent } from './user/user.component';
+import { PatientChoicesComponent } from './patients_choices/patients_choices.component';
+import { CreateDoctorComponent } from './create-doctor/create-doctor.component';
+import { ViewPatientComponent } from './view-patient/view-patient.component';
+import { RemovePatientComponent } from './remove-patient/remove-patient.component';
+import { DoctorsChoicesComponent } from './doctors-choices/doctors-choices.component';
+import { AdminChoicesComponent } from './admin-choices/admin-choices.component';
+import { PatientsListComponent } from './patients-list/patients-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CreateComponent,
-    PatientControlPanelComponent
+    CreatePatientComponent,
+    PatientControlPanelComponent,
+    DoctorComponent,
+    UserComponent,
+    PatientChoicesComponent,
+    CreateDoctorComponent,
+    ViewPatientComponent,
+    RemovePatientComponent,
+    DoctorsChoicesComponent,
+    AdminChoicesComponent,
+    PatientsListComponent
   ],
   imports: [
     BrowserModule,

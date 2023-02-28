@@ -5,8 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
+  [x: string]: any;
   getAllPatients() {
-    throw new Error('Method not implemented.');
+    const url = "http://localhost:9000/patient"
+    return this.http.get(url);
   }
   createUser(value: any) {
     throw new Error('Method not implemented.');
@@ -17,7 +19,7 @@ export class UserService {
   private apiUrl = 'http://localhost:9000/';
 
   getPatientById(id:number){
-    const url = `http://localhost:9000/patient/1`;
+    const url = `http://localhost:9000/patient/{{id}}`;
     return this.http.get(url);
   }
 

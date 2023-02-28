@@ -1,0 +1,25 @@
+<p>patients-list works!</p>
+
+<pre> {{unames | json}} </pre>
+
+<p  *ngFor="let userName of unames" > {{userName.id}}</p>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6aw8Fpnhgg898vLQGBXpgRrp1qf6RChQ4A&usqp=CAU" class="card-img-top" alt="User Image">
+  <div class="card-body">
+    <h5 class="card-title">Username : </h5>
+      <p class="card-text">{{ unames.username }} </p>
+    <h5 class="card-title">First Name : </h5>
+      <p class="card-text">{{ unames.firstname }} </p>
+    <h5 class="card-title">Last Name : </h5>
+      <p class="card-text">{{ unames.lastname }} </p>
+    <h5 class="card-title">Address : </h5>
+      <p class="card-text">{{ unames.address }} </p>
+    <h5 class="card-title">City : </h5>
+      <p class="card-text">{{ unames.city }} </p>
+    <h5 class="card-title">Birth Date : </h5>
+      <p class="card-text">{{ unames.birthdate }} </p>
+    <h5 class="card-title">Diabetes Type : </h5>
+      <p class="card-text">{{ unames.diabetestype }} </p>
+  </div>
+</div>
