@@ -3,7 +3,7 @@
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-8 col-xl-6">
         <div class="card rounded-3">
-          <form [formGroup]="createForm" (ngSubmit)="createUser()" class="px-md-2">
+          <form [formGroup="createForm"]="createForm" (ngSubmit)="createUser()" class="px-md-2">
             <div>
               <br>
               <label> Username: </label>

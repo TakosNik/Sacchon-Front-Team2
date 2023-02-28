@@ -1,42 +1,30 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="card" style="width: 18rem;">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6aw8Fpnhgg898vLQGBXpgRrp1qf6RChQ4A&usqp=CAU" class="card-img-top" alt="User Image">
-      <div class="card-body">
-        <div class="card-text">
-          <h5 class="card-title">Username:</h5>
-          <p>{{ patient.username }}</p>
+    <div class="col-md-2" class="card">
+      <div class="row g-0">
+        <div class="col-md-3">
+          <img src="https://lofrev.net/wp-content/photos/2017/03/user_blue_logo.png" class="img-fluid rounded-start" alt="..." style="width: 40%">
         </div>
-
-        <div class="card-text">
-          <h5 class="card-title">First Name:</h5>
-          <p>{{ patient.firstname }}</p>
-        </div>
-
-        <div class="card-text">
-          <h5 class="card-title">Last Name:</h5>
-          <p>{{ patient.lastname }}</p>
-        </div>
-
-        <div class="card-text">
-          <h5 class="card-title">Address:</h5>
-          <p>{{ patient.address }}</p>
-        </div>
-
-        <div class="card-text">
-          <h5 class="card-title">City:</h5>
-          <p>{{ patient.city }}</p>
-        </div>
-
-        <div class="card-text">
-          <h5 class="card-title">Birth Date:</h5>
-          <p>{{ patient.birthdate }}</p>
-        </div>
-
-        <div class="card-text">
-          <h5 class="card-title">Diabetes Type:</h5>
-          <p>{{ patient.diabetestype }}</p>
+        <div class="col-md-2" style="margin-left: -270px">
+          <div class="card-body">
+            <h5 class="card-title">Username : </h5>
+            <p class="card-text">{{ patient.username }} </p>
+            <br>
+            <h5 class="card-title">First Name : </h5>
+            <p class="card-text">{{ patient.firstname }} </p><br>
+            <h5 class="card-title">Last Name : </h5>
+            <p class="card-text">{{ patient.lastname }} </p>
+            <br>
+            <h5 class="card-title">Address : </h5>
+            <p class="card-text">{{ patient.address }} </p><br>
+            <h5 class="card-title">City : </h5>
+            <p class="card-text">{{ patient.city }} </p><br>
+            <h5 class="card-title">Birth Date : </h5>
+            <p class="card-text">{{ patient.birthdate }} </p><br>
+            <h5 class="card-title">Diabetes Type : </h5>
+            <p class="card-text">{{ patient.diabetestype }} </p>
+          </div>
         </div>
       </div>
     </div>
@@ -54,7 +42,7 @@
             <div class="container">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_Af8hy4RBKje--pOU_vNYU7DcVQfU46PsQZkdHCPPcryD2vwWO8ebwrPJnMz0p3UKx4&usqp=CAU" alt="PatientAvatar" class="image">
               <div class="buttons">
-                <button class="btn btn-primary mt-3" (click)="goToPatient(' ')">Update Profile</button>
+                <button class="btn btn-primary mt-3" (click)="goToPatient('update-patient-info')">Update Profile</button>
               </div>
             </div>
           </div>

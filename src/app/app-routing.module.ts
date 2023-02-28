@@ -10,6 +10,7 @@ import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { DoctorsChoicesComponent } from './doctors-choices/doctors-choices.component';
 import { AdminChoicesComponent } from './admin-choices/admin-choices.component';
 import { PatientsListComponent } from './patients-list/patients-list.component';
+import { UpdatePatientComponent } from './update-patient-info/update-patient-info.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'admin-choices' , component: AdminChoicesComponent},
   { path: 'patient-control-panel' , component: PatientControlPanelComponent},
   { path: 'patients-list' , component: PatientsListComponent},
+  { path: 'update-patient-info' , component: UpdatePatientComponent},
   { path: '' , component: HomeComponent }
   // { path: '**' , component: PatientControlPanelComponent}
 ];
