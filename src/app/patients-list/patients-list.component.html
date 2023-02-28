@@ -4,22 +4,30 @@
 
 <p  *ngFor="let userName of unames" > {{userName.id}}</p> -->
 
-<div *ngFor="let uname of unames" class="card" style="width: 18rem;">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6aw8Fpnhgg898vLQGBXpgRrp1qf6RChQ4A&usqp=CAU" class="card-img-top" alt="User Image">
-  <div class="card-body">
-    <h5 class="card-title">Username : </h5>
-      <p class="card-text">{{ uname.username }} </p>
+<div class="card mb-3" style="max-width: 540px;" *ngFor="let uname of unames" class="card">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://lofrev.net/wp-content/photos/2017/03/user_blue_logo.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+      <h5 class="card-title">Username : </h5>
+      <p class="card-text">{{ uname.username }} </p><br>
     <h5 class="card-title">First Name : </h5>
-      <p class="card-text">{{ uname.firstname }} </p>
+      <p class="card-text">{{ uname.firstname }} </p><br>
     <h5 class="card-title">Last Name : </h5>
-      <p class="card-text">{{ uname.lastname }} </p>
+      <p class="card-text">{{ uname.lastname }} </p><br>
     <h5 class="card-title">Address : </h5>
-      <p class="card-text">{{ uname.address }} </p>
+      <p class="card-text">{{ uname.address }} </p><br>
     <h5 class="card-title">City : </h5>
-      <p class="card-text">{{ uname.city }} </p>
+      <p class="card-text">{{ uname.city }} </p><br>
     <h5 class="card-title">Birth Date : </h5>
-      <p class="card-text">{{ uname.birthdate }} </p>
+      <p class="card-text">{{ uname.birthdate }} </p><br>
     <h5 class="card-title">Diabetes Type : </h5>
       <p class="card-text">{{ uname.diabetestype }} </p>
+
+      </div>
+    </div>
   </div>
+  <hr>
 </div>

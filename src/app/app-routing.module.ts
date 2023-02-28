@@ -12,7 +12,6 @@ import { AdminChoicesComponent } from './admin-choices/admin-choices.component';
 import { PatientsListComponent } from './patients-list/patients-list.component';
 import { UpdatePatientComponent } from './update-patient-info/update-patient-info.component';
 
-
 const routes: Routes = [
   { path: 'home' , component: HomeComponent },
   { path: 'patient' , component: PatientControlPanelComponent },
@@ -25,8 +24,8 @@ const routes: Routes = [
   { path: 'admin-choices' , component: AdminChoicesComponent},
   { path: 'patient-control-panel' , component: PatientControlPanelComponent},
   { path: 'patients-list' , component: PatientsListComponent},
-  { path: 'update-patient-info' , component: UpdatePatientComponent},
-  { path: '' , component: HomeComponent }
+  { path: '' , component: HomeComponent },
+  { path: 'update-patient-info' , component: UpdatePatientComponent}
   // { path: '**' , component: PatientControlPanelComponent}
 ];
 
@@ -35,4 +34,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { };
-

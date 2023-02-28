@@ -17,8 +17,8 @@ export class DoctorComponent implements OnInit{
   }
 
   ngOnInit(): void {
-      this.unames = this.service.getAllPatients().subscribe({
-        next: (response) => {this.unames = response;
+      this.unames = this.service['getAllDoctors']().subscribe({
+        next: (response: any) => {this.unames = response;
         },
         // error: err => this.message = err,
         // complete: () => alert('StreamComplete')
