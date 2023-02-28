@@ -19,7 +19,7 @@ export class UserService {
   private apiUrl = 'http://localhost:9000/';
 
   getPatientById(id:number){
-    const url = `http://localhost:9000/patient/{{id}}`;
+    const url = `http://localhost:9000/patient/1`;
     return this.http.get(url);
   }
 

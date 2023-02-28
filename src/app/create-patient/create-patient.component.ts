@@ -23,7 +23,7 @@ export class CreatePatientComponent implements OnInit {
       address: [''],
       city: [''],
       birthdate: [''],
-      diabetestype: ['']
+      typediabetes: ['']
     });
   }
 

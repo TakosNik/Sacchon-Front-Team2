@@ -1,44 +1,53 @@
 .container {
   position: relative;
-  width: 50%;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .image {
   display: block;
-  width: 50%;
+  margin: 0 auto;
+  max-width: 100%;
   height: auto;
+  margin-top: 15px;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.btn {
   background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.container:hover .overlay {
-  opacity: 1;
+.btn:hover {
+  background-color: #005f78;
 }
+
 .float-container {
   opacity: 1;
   padding: 20px;
 }
 
-
 .float-child {
   opacity: 1;
-  width: 50%;
+  width: 35%;
   float: left;
   padding: 20px;
-  border: 2px ;
+  border: none;
 }
-
 
 .text {
   color: white;

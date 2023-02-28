@@ -1,58 +1,112 @@
+<div class="container-fluid">
+  <div class="row">
 
-  <!-- // Update Patient // -->
-    <div class="float-child">
-      <div class="container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_Af8hy4RBKje--pOU_vNYU7DcVQfU46PsQZkdHCPPcryD2vwWO8ebwrPJnMz0p3UKx4&usqp=CAU" alt="PatientAvatar" class="image">
-        <div class="buttons">
-          <button class="btn btn-primary mt-3" (click)="goToPatient(' ')">Update Patient's Profile</button>
+    <div class="card" style="width: 18rem;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6aw8Fpnhgg898vLQGBXpgRrp1qf6RChQ4A&usqp=CAU" class="card-img-top" alt="User Image">
+      <div class="card-body">
+        <div class="card-text">
+          <h5 class="card-title">Username:</h5>
+          <p>{{ patient.username }}</p>
+        </div>
+
+        <div class="card-text">
+          <h5 class="card-title">First Name:</h5>
+          <p>{{ patient.firstname }}</p>
+        </div>
+
+        <div class="card-text">
+          <h5 class="card-title">Last Name:</h5>
+          <p>{{ patient.lastname }}</p>
+        </div>
+
+        <div class="card-text">
+          <h5 class="card-title">Address:</h5>
+          <p>{{ patient.address }}</p>
+        </div>
+
+        <div class="card-text">
+          <h5 class="card-title">City:</h5>
+          <p>{{ patient.city }}</p>
+        </div>
+
+        <div class="card-text">
+          <h5 class="card-title">Birth Date:</h5>
+          <p>{{ patient.birthdate }}</p>
+        </div>
+
+        <div class="card-text">
+          <h5 class="card-title">Diabetes Type:</h5>
+          <p>{{ patient.diabetestype }}</p>
         </div>
       </div>
     </div>
 
-  <!-- // Delete Patient // -->
-  <div class="float-child">
-    <div class="container">
-      <img src="https://cdn-icons-png.flaticon.com/512/2603/2603105.png" alt="PatientAvatar" class="image">
-      <div class="buttons">
-        <button class="btn btn-primary mt-3" (click)="goToPatient('createPatient')">Remove Patient's Profile</button>
-      </div>
-    </div>
-  </div>
 
-    <!-- // Add Patient's Data // -->
-    <div class="float-child">
-      <div class="container">
-        <img src="https://cdn-icons-png.flaticon.com/512/2312/2312340.png" alt="PatientAvatar" class="image">
-        <div class="buttons">
-          <button class="btn btn-primary mt-3" (click)="goToPatient('patient-control-panel')">Add Patient's Data</button>
+
+    <!-- Account Management -->
+    <div class="col-md-4">
+      <div class="card border-primary mb-3">
+        <div class="card-header">
+          <h4 class="card-title">Account Management</h4>
         </div>
-      </div>
-    </div>
+        <div class="card-body d-flex">
+          <div class="float-child">
+            <div class="container">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_Af8hy4RBKje--pOU_vNYU7DcVQfU46PsQZkdHCPPcryD2vwWO8ebwrPJnMz0p3UKx4&usqp=CAU" alt="PatientAvatar" class="image">
+              <div class="buttons">
+                <button class="btn btn-primary mt-3" (click)="goToPatient(' ')">Update Profile</button>
+              </div>
+            </div>
+          </div>
 
-
-    <!-- // Update Patient's Data // -->
-    <div class="float-child">
-      <div class="container">
-        <img src="https://cdn3.iconfinder.com/data/icons/database-29/100/database_data_storage_db_file-02-512.png" alt="PatientAvatar" class="image">
-        <div class="buttons">
-          <button class="btn btn-primary mt-3" (click)="goToPatient('createPatient')">Update Patient's Data</button>
-        </div>
-      </div>
-    </div>
-
-
-      <!-- // Delete Patient's Data // -->
-      <div class="float-child">
-        <div class="container">
-          <img src="https://iconarchive.com/download/i65465/icojam/blue-bits/database-delete.ico" alt="PatientAvatar" class="image">
-          <div class="buttons">
-            <button class="btn btn-primary mt-3" (click)="goToPatient('createPatient')">Delete Patient's Data</button>
+          <div class="float-child">
+            <div class="container">
+              <img src="https://cdn-icons-png.flaticon.com/512/2603/2603105.png" alt="PatientAvatar" class="image">
+              <div class="buttons">
+                <button class="btn btn-primary mt-3" (click)="goToPatient('createPatient')">Delete Profile</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="float-child">
-        <div class="container">
+    <!-- Measurement Management -->
+    <div class="col-md-4">
+      <div class="card border-primary mb-3">
+        <div class="card-header">
+          <h4 class="card-title">Measurement Management</h4>
+        </div>
+        <div class="card-body d-flex">
+          <div class="float-child">
+            <div class="container">
+              <img src="https://cdn-icons-png.flaticon.com/512/2312/2312340.png" alt="PatientAvatar" class="image">
+              <div class="buttons">
+                <button class="btn btn-primary mt-3" (click)="goToPatient('patient-control-panel')">Add New Measurements</button>
+              </div>
+            </div>
+          </div>
 
+          <div class="float-child">
+            <div class="container">
+              <img src="https://cdn3.iconfinder.com/data/icons/database-29/100/database_data_storage_db_file-02-512.png" alt="PatientAvatar" class="image">
+              <div class="buttons">
+                <button class="btn btn-primary mt-3" (click)="goToPatient('createPatient')">Update Measurement</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-child">
+            <div class="container">
+              <img src="https://iconarchive.com/download/i65465/icojam/blue-bits/database-delete.ico" alt="PatientAvatar" class="image">
+              <div class="buttons">
+                <button class="btn btn-primary mt-3" (click)="goToPatient('createPatient')">Delete Measurement</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+  </div>
+</div>
