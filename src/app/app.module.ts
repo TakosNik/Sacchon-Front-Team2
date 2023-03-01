@@ -16,7 +16,7 @@ import { RemovePatientComponent } from './remove-patient/remove-patient.componen
 import { DoctorsChoicesComponent } from './doctors-choices/doctors-choices.component';
 import { AdminChoicesComponent } from './admin-choices/admin-choices.component';
 import { PatientsListComponent } from './patients-list/patients-list.component';
-import {  UpdatePatientComponent } from './update-patient-info/update-patient-info.component';
+import { UpdatePatientComponent } from './update-patient-info/update-patient-info.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import {  UpdatePatientComponent } from './update-patient-info/update-patient-in
     DoctorsChoicesComponent,
     AdminChoicesComponent,
     PatientsListComponent,
-    UpdatePatientComponent
+    UpdatePatientComponent,
   ],
   imports: [
     BrowserModule,

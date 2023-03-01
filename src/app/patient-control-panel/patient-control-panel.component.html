@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <h2>{{ patient?.firstName }} {{ patient?.lastName }}Patient's Control Panel</h2>
+  <h2>Add New Measurements</h2>
   <hr>
 
   <div class="row">
@@ -15,15 +15,15 @@
         <tbody>
           <tr *ngFor="let carbonate of dailyCarbonateIntakes">
             <td>{{ carbonate.date | date:'MM/dd/yyyy' }}</td>
-            <td>{{ carbonate.amount }}</td>
+            <td>{{ carbonate.gram }}</td>
           </tr>
         </tbody>
       </table>
 
       <form (ngSubmit)="addCarbonate()" #carbonateForm="ngForm">
         <div class="form-group">
-          <label for="amount">Amount (mg)</label>
-          <input type="number" class="form-control" id="amount" name="amount" [(ngModel)]="newCarbonate.amount" required>
+          <label for="gram">Amount (mg)</label>
+          <input type="number" class="form-control" id="gram" name="gram" [(ngModel)]="newCarbonate.gram" required>
         </div>
 
         <button type="submit" class="btn btn-primary" [disabled]="!carbonateForm.form.valid">Add</button>
@@ -36,30 +36,28 @@
         <thead>
           <tr>
             <th>Date</th>
+            <th>Time</th>
             <th>Level (mg/dL)</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let glucose of dailyBloodGlucoseLevels">
-            <td>{{ glucose.date | date:'MM/dd/yyyy' }}</td>
-            <td>{{ glucose.level }}</td>
+            <td>{{ glucose.glDate | date:'MM/dd/yyyy' }}</td>
+            <td>{{ glucose.glTime }}</td>
+            <td>{{ glucose.measurement }}</td>
           </tr>
         </tbody>
       </table>
 
       <form (ngSubmit)="addGlucose()" #glucoseForm="ngForm">
         <div class="form-group">
-          <label for="level">Level (mg/dL)</label>
-          <input type="number" class="form-control" id="level" name="level" [(ngModel)]="newGlucose.level" required>
+          <label for="measurement">Level (mg/dL)</label>
+          <input type="number" class="form-control" id="measurement" name="measurement" [(ngModel)]="newGlucose.measurement" required>
         </div>
 
         <button type="submit" class="btn btn-primary" [disabled]="!glucoseForm.form.valid">Add</button>
       </form>
     </div>
   </div>
-
   <hr>
-
-  <h4>Last Consultation</h4>
-  <p>{{ latestDoctorConsultation?.date | date:'MM/dd/yyyy' }} - {{ latestDoctorConsultation?.summary }}</p>
 </div>

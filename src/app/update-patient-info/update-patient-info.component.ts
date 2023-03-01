@@ -48,37 +48,41 @@ export class UpdatePatientComponent implements OnInit {
           birthdate: data.birthdate,
           diabetestype: data.diabetestype
         });
+        this.patient = data;
       });
     });
   }
 
   updatePatient() {
     const data = {
-      username: this.username?.value,
-      firstname: this.firstname?.value,
-      lastname: this.lastname?.value,
-      address: this.address?.value,
-      city: this.city?.value,
-      birthdate: this.birthdate?.value,
-      diabetestype: this.diabetestype?.value
+      username: this.updateForm.value.username,
+      firstname: this.updateForm.value.firstname,
+      lastname: this.updateForm.value.lastname,
+      address: this.updateForm.value.address,
+      city: this.updateForm.value.city,
+      birthdate: this.updateForm.value.birthdate,
+      diabetestype: this.updateForm.value.diabetestype
     };
-    this.http.put(`http://localhost:9000/patient/${this.patientId}`, data).subscribe({
+    this.http.put(`http://localhost:9000/patient/1`, data).subscribe({
       next: res => {
         this.response = res;
         // Reset the form and mark it as pristine and untouched
         this.updateForm.reset();
         this.updateForm.markAsPristine();
         this.updateForm.markAsUntouched();
+        // Update the patient object
+        this.patient.username = data.username;
+        this.patient.firstname = data.firstname;
+        this.patient.lastname = data.lastname;
+        this.patient.address = data.address;
+        this.patient.city = data.city;
+        this.patient.birthdate = data.birthdate;
+        this.patient.typediabetes = data.diabetestype;
       },
-      error: err => console.error(err)
+      error: err => {
+        console.log(err);
+      }
     });
-  }
-
-
-  resetForm() {
-    this.updateForm.reset();
-    this.updateForm.markAsPristine();
-    this.updateForm.markAsUntouched();
   }
 
   get username() {
