@@ -27,6 +27,7 @@ const routes: Routes = [
   { path: 'patient-control-panel' , component: PatientControlPanelComponent},
   { path: 'patients-list' , component: PatientsListComponent},
   { path: 'update-patient-info' , component: UpdatePatientComponent},
+  { path: 'view-measurements' , component: MeasurementsComponent},
   { path: '' , component: HomeComponent }
   // { path: '**' , component: PatientControlPanelComponent}
 ];
