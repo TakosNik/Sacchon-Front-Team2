@@ -17,13 +17,11 @@ export class CreateDoctorComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm = this.fb.group({
+      doctorType: [''],
+      dateOfBirth: [''],
+      firstName: [''],
+      lastName: [''],
       username: [''],
-      firstname: [''],
-      lastname: [''],
-      address: [''],
-      city: [''],
-      birthdate: [''],
-      diabetestype: ['']
     });
   }
 
@@ -36,15 +34,13 @@ export class CreateDoctorComponent implements OnInit {
 
   createUser() {
     const data = {
-      username: this.username?.value,
-      firstname: this.firstname?.value,
-      lastname: this.lastname?.value,
-      address: this.address?.value,
-      city: this.city?.value,
-      birthdate: this.birthdate?.value,
-      diabetestype: this.diabetestype?.value
+      doctorType: this.doctorType?.value,
+      dateOfBirth: this.dateOfBirth?.value,
+      firstName: this.firstName?.value,
+      lastName: this.lastName?.value,
+      username: this.username?.value
     };
-    this.http.post('http://localhost:9001/doctor', data).subscribe({
+    this.http.post('http://localhost:9000/doctor', data).subscribe({
       next: res => {
         this.response = res;
         this.createForm.reset();
@@ -53,39 +49,30 @@ export class CreateDoctorComponent implements OnInit {
     });
   }
 
-
-
   resetForm() {
     this.createForm.reset();
     this.createForm.markAsPristine();
     this.createForm.markAsUntouched();
   }
 
+  get doctorType() {
+    return this.createForm.get('doctorType');
+  }
+
+  get dateOfBirth() {
+    return this.createForm.get('dateOfBirth');
+  }
+
+
+  get firstName() {
+    return this.createForm.get('first_name');
+  }
+
+  get lastName() {
+    return this.createForm.get('last_name');
+  }
+
   get username() {
     return this.createForm.get('username');
-  }
-
-  get firstname() {
-    return this.createForm.get('firstname');
-  }
-
-  get lastname() {
-    return this.createForm.get('lastname');
-  }
-
-  get address() {
-    return this.createForm.get('address');
-  }
-
-  get city() {
-    return this.createForm.get('city');
-  }
-
-  get birthdate() {
-    return this.createForm.get('birthdate');
-  }
-
-  get diabetestype() {
-    return this.createForm.get('diabetestype');
   }
 }

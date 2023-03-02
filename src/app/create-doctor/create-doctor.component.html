@@ -8,40 +8,31 @@
             <div>
               <br>
               <label> Username: </label>
-              <input type="text" formControlName="username" class="form-control mb-1" placeholder="Username">
+              <input type="text" formControlName="username" class="form-control mb-1" placeholder="Username" required="yes">
               <!-- <small class="alert alert-danger" *ngIf="createForm.get('username').hasError('required') && createForm.get('username').touched">Username is required</small> -->
             </div>
             <div>
               <label> First Name: </label>
-              <input type="text" formControlName="firstname" class="form-control mb-1" placeholder="First name">
+              <input type="text" formControlName="firstName" class="form-control mb-1" placeholder="First Name" required="yes">
               <!-- <small class="alert alert-danger" *ngIf="createForm.get('firstname').hasError('required') && createForm.get('firstname').touched">First Name is required</small> -->
             </div>
             <div>
               <label> Last Name: </label>
-              <input type="text" formControlName="lastname" class="form-control" placeholder="Last name">
+              <input type="text" formControlName="lastName" class="form-control" placeholder="Last" required="yes">
               <!-- <small class="alert alert-danger" *ngIf="createForm.get('lastname').hasError('required') && createForm.get('lastname').touched">Last name is required</small>
               <small class="alert alert-danger" *ngIf="createForm.get('lastname').hasError('minlength') && createForm.get('lastname').touched">Last must have 3 letters</small> -->
             </div>
             <div>
-              <label> Address: </label>
-              <input type="text" formControlName="address" class="form-control" placeholder="Address">
+              <label> Birth Date: </label>
+              <input type="date" formControlName="dateOfBirth" class="form-control" placeholder="Birth Date">
             </div>
             <div>
-              <label> City: </label>
-              <input type="text" formControlName="city" class="form-control" placeholder="City">
-            </div>
-            <div>
-              <label> BirthDate: </label>
-              <input type="date" formControlName="birthdate" class="form-control" placeholder="BirthDate">
-            </div>
-            <div>
-              <label> Diabetes Type: </label>
-              <br>
-              <select id="diabetestype" name="diabetestype" formControlName="diabetestype">
-                <option value="Type 1">Type 1</option>
-                <option value="Type 2">Type 2</option>
-                <option value="Gestational">Gestational</option>
-              </select>
+              <div>
+                <label> Doctor Type: </label>
+                <input type="text" formControlName="dtype" class="form-control" placeholder="Doctor Type Doctor or Chief" value="Doctor">
+                <!-- <small class="alert alert-danger" *ngIf="createForm.get('lastname').hasError('required') && createForm.get('lastname').touched">Last name is required</small>
+                <small class="alert alert-danger" *ngIf="createForm.get('lastname').hasError('minlength') && createForm.get('lastname').touched">Last must have 3 letters</small> -->
+              </div>
             </div>
 
             <div class="buttons">

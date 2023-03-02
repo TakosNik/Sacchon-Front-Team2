@@ -19,12 +19,12 @@ export class UserService {
   private apiUrl = 'http://localhost:9000/';
 
   getPatientById(id:number){
-    const url = `http://localhost:9000/patient/1`;
+    const url = `http://localhost:9000/patient/{{id}}`;
     return this.http.get(url);
   }
 
     post(data:any){
-      const url = 'https://reqres.in/api/users'
+      const url = 'http://localhost:9000/patient';
 
       const headers = new HttpHeaders()
       .set('Content-Type', 'application/json')

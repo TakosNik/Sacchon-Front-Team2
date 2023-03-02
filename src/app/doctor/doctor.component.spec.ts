@@ -4,9 +4,9 @@ import { UserService } from '../services/user.service';
 import { PipeTransform, Pipe } from '@angular/core';
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss']
+  selector: 'app-doctor',
+  templateUrl: './doctor.component.html',
+  styleUrls: ['./doctor.component.scss']
 })
 export class DoctorComponent implements OnInit{
 
