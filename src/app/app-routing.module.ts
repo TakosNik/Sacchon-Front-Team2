@@ -1,4 +1,3 @@
-import { MeasurementsComponent } from './view-measurements/view-measurements.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -12,6 +11,9 @@ import { DoctorsChoicesComponent } from './doctors-choices/doctors-choices.compo
 import { AdminChoicesComponent } from './admin-choices/admin-choices.component';
 import { PatientsListComponent } from './patients-list/patients-list.component';
 import { UpdatePatientComponent } from './update-patient-info/update-patient-info.component';
+import { SearchbuttonComponent } from './searchbutton/searchbutton.component';
+import { MeasurementsComponent } from './view-measurements/view-measurements.component';
+
 
 
 const routes: Routes = [
@@ -21,13 +23,14 @@ const routes: Routes = [
   { path: 'createPatient', component: CreatePatientComponent},
   { path: 'createDoctor', component: CreateDoctorComponent},
   { path: 'patients_choices' , component: PatientChoicesComponent},
-  { path: 'view_patient', component: ViewPatientComponent},
+  { path: 'view-patient', component: ViewPatientComponent},
   { path: 'doctors-choices' , component: DoctorsChoicesComponent},
   { path: 'admin-choices' , component: AdminChoicesComponent},
   { path: 'patient-control-panel' , component: PatientControlPanelComponent},
   { path: 'patients-list' , component: PatientsListComponent},
   { path: 'update-patient-info' , component: UpdatePatientComponent},
   { path: 'view-measurements' , component: MeasurementsComponent},
+  { path: 'searchbutton' , component: SearchbuttonComponent},
   { path: '' , component: HomeComponent }
   // { path: '**' , component: PatientControlPanelComponent}
 ];

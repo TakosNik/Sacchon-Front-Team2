@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import * as moment from 'moment';
+import * as moment from 'moment'
 import { Observable, timestamp } from 'rxjs';
 
 @Component({

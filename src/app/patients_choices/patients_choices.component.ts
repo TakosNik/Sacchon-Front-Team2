@@ -15,10 +15,10 @@ export class PatientChoicesComponent {
 
   ngOnInit(): void {
     this.userService.getPatientById(1).subscribe({
-      next: (response) => {
+      next: (response: any) => {
         this.patient = response;
       },
-      error: (err) => {
+      error: (err: any) => {
         this.message = err;
       },
     });

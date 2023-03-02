@@ -5,41 +5,51 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  [x: string]: any;
+
+  constructor(private http: HttpClient) {}
+
+  getAllDoctors() {
+    const url = "http://localhost:9000/doctors";
+    return this.http.get(url);
+  }
+
+
   getAllPatients() {
     const url = "http://localhost:9000/patient"
     return this.http.get(url);
   }
+
   createUser(value: any) {
     throw new Error('Method not implemented.');
   }
 
-  constructor(private http:HttpClient) {}
-
-  private apiUrl = 'http://localhost:9000/';
-
-  getPatientById(id:number){
-    const url = `http://localhost:9000/patient/{{id}}`;
+  getPatientById(id: number){
+    const url = `http://localhost:9000/patient/${id}`;
     return this.http.get(url);
   }
 
-    post(data:any){
-      const url = 'http://localhost:9000/patient';
 
-      const headers = new HttpHeaders()
-      .set('Content-Type', 'application/json')
-      .set('crossDomain', 'true');
+  post(data: any){
+    const url = 'http://localhost:9000/patient';
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     return this.http.post(url, JSON.stringify(data), {headers: headers});
-    }
+  }
 
   updatePatient(id: number, data: any) {
     const url = `http://localhost:9000/patient/1`;
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
+
     return this.http.put(url, JSON.stringify(data), {headers: headers});
   }
 
+  postdoctor(data:any){
+    const url = 'http://localhost:9000/doctor';
 
+    const headers = new HttpHeaders()
+    .set('Content-Type', 'application/json')
+    .set('crossDomain', 'true');
 
-
+    return this.http.post(url, JSON.stringify(data), {headers: headers});
+  }
 }
