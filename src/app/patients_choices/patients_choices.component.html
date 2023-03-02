@@ -79,16 +79,7 @@
             <div class="container">
               <img src="https://cdn3.iconfinder.com/data/icons/database-29/100/database_data_storage_db_file-02-512.png" alt="PatientAvatar" class="image">
               <div class="buttons">
-                <button class="btn btn-primary mt-3" (click)="goToPatient('createPatient')">Update Measurement</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="float-child">
-            <div class="container">
-              <img src="https://iconarchive.com/download/i65465/icojam/blue-bits/database-delete.ico" alt="PatientAvatar" class="image">
-              <div class="buttons">
-                <button class="btn btn-primary mt-3" (click)="goToPatient('createPatient')">Delete Measurement</button>
+                <button class="btn btn-primary mt-3" (click)="goToPatient('view-measurements')">View Measurements</button>
               </div>
             </div>
           </div>
@@ -98,3 +89,4 @@
 
   </div>
 </div>
+<router-outlet></router-outlet>

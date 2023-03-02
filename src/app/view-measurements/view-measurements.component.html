@@ -1,0 +1,64 @@
+<div class="container">
+  <h2>Carbonates and Glucose Measurements</h2>
+
+  <!-- Start and End Date Input -->
+  <div class="input-group">
+    <span class="input-group-addon">From:</span>
+    <input type="date" class="form-control" [(ngModel)]="startDate">
+    <span class="input-group-addon">To:</span>
+    <input type="date" class="form-control" [(ngModel)]="endDate">
+    <button class="btn btn-primary" (click)="calculateAverageCarbonates(); calculateAverageGlucose()">Calculate Averages</button>
+  </div>
+
+  <!-- Average Carbonates and Glucose Display -->
+  <div *ngIf="avgCarbonates && avgGlucose" class="averages-container">
+    <div>
+      <h3>Average Carbonates:</h3>
+      <p>{{avgCarbonates}}</p>
+    </div>
+    <div>
+      <h3>Average Glucose:</h3>
+      <p>{{avgGlucose}}</p>
+    </div>
+  </div>
+
+  <!-- Carbonates List -->
+  <h3>Carbonates</h3>
+  <ul class="list-group">
+    <li *ngFor="let carbonate of carbonates" class="list-group-item">
+      <div class="row">
+        <div class="col-sm-2">
+          {{carbonate.date | date:'MM/dd/yyyy'}} - {{carbonate.gram}}
+        </div>
+        <div class="col-sm-8">
+          <input type="number" [(ngModel)]="carbonate.gram" class="form-control">
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-danger" (click)="deleteCarbonate(carbonate.id)">Delete</button>
+          <button class="btn btn-success" (click)="updateCarbonate(carbonate)">Update</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Glucose List -->
+  <h3>Glucose</h3>
+  <ul class="list-group">
+    <li *ngFor="let glucose of glucose" class="list-group-item">
+      <div class="row">
+        <div class="col-sm-2">
+          {{glucose.glDate | date:'MM/dd/yyyy'}} - {{glucose.glTime}} - {{ glucose.measurement }}
+        </div>
+        <div class="col-sm-8">
+          <input type="number" [(ngModel)]="glucose.measurement" class="form-control">
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-danger" (click)="deleteGlucose(glucose.id)">Delete</button>
+          <button class="btn btn-success" (click)="updateGlucose(glucose)">Update</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<router-outlet> </router-outlet>
+

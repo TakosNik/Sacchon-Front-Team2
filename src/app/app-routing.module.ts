@@ -1,3 +1,4 @@
+import { MeasurementsComponent } from './view-measurements/view-measurements.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,7 @@ import { PatientsListComponent } from './patients-list/patients-list.component';
 import { UpdatePatientComponent } from './update-patient-info/update-patient-info.component';
 
 
+
 const routes: Routes = [
   { path: 'home' , component: HomeComponent },
   { path: 'patient' , component: PatientControlPanelComponent },
@@ -26,8 +28,9 @@ const routes: Routes = [
   { path: 'patient-control-panel' , component: PatientControlPanelComponent},
   { path: 'patients-list' , component: PatientsListComponent},
   { path: 'update-patient-info' , component: UpdatePatientComponent},
+  { path: 'view-measurements' , component: MeasurementsComponent},
   { path: '' , component: HomeComponent }
-  // { path: '**' , component: PatientControlPanelComponent}
+
 ];
 
 @NgModule({
