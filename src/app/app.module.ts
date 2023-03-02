@@ -1,9 +1,8 @@
-import { MeasurementsComponent } from './view-measurements/view-measurements.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Add this line
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
@@ -17,9 +16,9 @@ import { RemovePatientComponent } from './remove-patient/remove-patient.componen
 import { DoctorsChoicesComponent } from './doctors-choices/doctors-choices.component';
 import { AdminChoicesComponent } from './admin-choices/admin-choices.component';
 import { PatientsListComponent } from './patients-list/patients-list.component';
-import { UpdatePatientComponent } from './update-patient-info/update-patient-info.component';
-
-
+import {  UpdatePatientComponent } from './update-patient-info/update-patient-info.component';
+import { SearchbuttonComponent } from './searchbutton/searchbutton.component';
+import { MeasurementsComponent } from './view-measurements/view-measurements.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +36,7 @@ import { UpdatePatientComponent } from './update-patient-info/update-patient-inf
     AdminChoicesComponent,
     PatientsListComponent,
     UpdatePatientComponent,
+    SearchbuttonComponent,
     MeasurementsComponent
   ],
   imports: [

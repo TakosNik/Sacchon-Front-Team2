@@ -29,6 +29,7 @@ export class CreatePatientComponent implements OnInit {
   }
 
   constructor(
+    private service: UserService,
     private fb: FormBuilder,
     private http: HttpClient
   ) { }

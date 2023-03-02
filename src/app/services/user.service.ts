@@ -34,12 +34,20 @@ export class UserService {
     }
 
   updatePatient(id: number, data: any) {
-    const url = `http://localhost:9000/patient/1`;
+    const url = `http://localhost:9000/patient/{{id}}`;
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.put(url, JSON.stringify(data), {headers: headers});
   }
 
+  postdoctor(data:any){
+    const url = 'http://localhost:9000/doctor';
 
+    const headers = new HttpHeaders()
+    .set('Content-Type', 'application/json')
+    .set('crossDomain', 'true');
+
+  return this.http.post(url, JSON.stringify(data), {headers: headers});
+  }
 
 
 }

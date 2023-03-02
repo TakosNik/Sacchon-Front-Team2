@@ -1,4 +1,3 @@
-import { MeasurementsComponent } from './view-measurements/view-measurements.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -12,7 +11,8 @@ import { DoctorsChoicesComponent } from './doctors-choices/doctors-choices.compo
 import { AdminChoicesComponent } from './admin-choices/admin-choices.component';
 import { PatientsListComponent } from './patients-list/patients-list.component';
 import { UpdatePatientComponent } from './update-patient-info/update-patient-info.component';
-
+import { SearchbuttonComponent } from './searchbutton/searchbutton.component';
+import { MeasurementsComponent } from './view-measurements/view-measurements.component';
 
 const routes: Routes = [
   { path: 'home' , component: HomeComponent },
@@ -26,8 +26,10 @@ const routes: Routes = [
   { path: 'admin-choices' , component: AdminChoicesComponent},
   { path: 'patient-control-panel' , component: PatientControlPanelComponent},
   { path: 'patients-list' , component: PatientsListComponent},
+  { path: '' , component: HomeComponent },
   { path: 'update-patient-info' , component: UpdatePatientComponent},
-  { path: '' , component: HomeComponent }
+  { path: 'searchbutton' , component: SearchbuttonComponent},
+  { path: 'view-measurements' , component: MeasurementsComponent},
   // { path: '**' , component: PatientControlPanelComponent}
 ];
 

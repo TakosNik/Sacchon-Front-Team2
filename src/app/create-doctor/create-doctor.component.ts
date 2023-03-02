@@ -40,7 +40,7 @@ export class CreateDoctorComponent implements OnInit {
       lastName: this.lastName?.value,
       username: this.username?.value
     };
-    this.http.post('http://localhost:9000/doctor', data).subscribe({
+    this.service.postdoctor(data).subscribe({
       next: res => {
         this.response = res;
         this.createForm.reset();

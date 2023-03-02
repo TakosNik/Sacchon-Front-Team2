@@ -14,7 +14,7 @@
       <div class="container">
         <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/navigate_plus.png" alt="PatientAvatar" class="image">
         <div class="buttons">
-          <button class="btn btn-primary mt-3" (click)="goToPage('createDoctor')">Create Doctor's Profile</button>
+          <button disabled class="btn btn-primary mt-3" (click)="goToPage('createDoctor')">Create Doctor's Profile</button>
         </div>
       </div>
     </div>
@@ -29,22 +29,30 @@
   </div>
 
 
-    <!-- // View All Patients  // -->
+    <!-- // View All Doctors  // -->
     <div class="float-child">
       <div class="container">
         <img src="https://cdn4.iconfinder.com/data/icons/medical-outline-1/100/Medical_-01-1024.png" alt="PatientAvatar" class="image">
         <div class="buttons">
-          <button class="btn btn-primary mt-3" (click)="goToPage('doctors-list')">Doctors' List</button>
+          <button disabled class="btn btn-primary mt-3" (click)="goToPage('doctors-list')">Doctors' List</button>
         </div>
       </div>
     </div>
 
 
-
+  <!-- // Search  Patients Id // -->
+  <div class="float-child">
+    <div class="container">
+      <img src="https://icons.veryicon.com/png/o/business/blue-business-icon/authority-role-management.png" alt="PatientAvatar" class="image">
+      <div class="buttons">
+        <button disabled class="btn btn-primary mt-3" (click)="goToPage('searchbutton')">Search by patient Id</button>
+      </div>
+    </div>
+  </div>
 
       <div class="float-child">
         <div class="container">
-
+      <p></p>
         </div>
       </div>
 
